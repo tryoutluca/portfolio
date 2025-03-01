@@ -5,9 +5,6 @@ import { SiLinkedin } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
 
 export const NavBar = () => {
 
@@ -33,7 +30,6 @@ export const NavBar = () => {
   }
 
   return (
-    <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
@@ -44,30 +40,50 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav.Link 
+              as={HashLink} 
+              to="/" 
+              className={activeLink === "/" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("/")}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link 
+              as={HashLink} 
+              to="/about" 
+              className={activeLink === "/about" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("/about")}
+            >
+              About
+            </Nav.Link>
+            <Nav.Link 
+              as={HashLink} 
+              to="/projects" 
+              className={activeLink === "/projects" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("/projects")}
+            >
+              Projects
+            </Nav.Link>
             </Nav>
             <span className="navbar-text">
             <div className='social-icon'>
                 <a href='https://www.linkedin.com/in/luca-luedi/' target="_blank" rel="noopener noreferrer">
                     <SiLinkedin className='white-icon'/>
                 </a>
-                <a href='https://github.com/luca-eweb' target="_blank" rel="noopener noreferrer">
+                <a href='https://github.com/tryoutluca' target="_blank" rel="noopener noreferrer">
                     <FaGithub className='white-icon'/>
                 </a>
                 <a href='https://www.instagram.com/' target="_blank" rel="noopener noreferrer">
                     <FaInstagram className='white-icon'/>
                 </a>
             </div>
-              <HashLink to='#connect'>
+              <HashLink to='/contact'>
                 <button className="vvd"><span>Let’s Connect</span></button>
               </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
   )
 }
 
