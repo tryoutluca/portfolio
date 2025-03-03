@@ -5,6 +5,7 @@ import { SiLinkedin } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
 
@@ -32,7 +33,7 @@ export const NavBar = () => {
   return (
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand as={Link} to="/">
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
