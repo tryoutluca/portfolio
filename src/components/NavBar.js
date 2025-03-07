@@ -6,6 +6,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
+import * as React from 'react';
+import Button from '@mui/material/Button';
 
 export const NavBar = () => {
 
@@ -79,7 +81,7 @@ export const NavBar = () => {
                 </a>
             </div>
               <HashLink to='/contact'>
-                <button className="vvd"><span>Let’s Connect</span></button>
+                <Button variant="contained">Let`s connect</Button>
               </HashLink>
             </span>
           </Navbar.Collapse>
