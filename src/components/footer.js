@@ -10,6 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
 import SitemarkIcon from './SitemarkIcon';
+import { HashLink } from 'react-router-hash-link';
 
 function Copyright() {
   return (
@@ -69,21 +70,9 @@ export default function Footer() {
               gap: 1,
             }}
           >
-            <Typography variant="body2" sx={{ fontWeight: 'medium', textTransform: 'uppercase', fontSize: '1.2rem', mb: 1,}}>
+            <Typography variant="body2">
               About
             </Typography>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Story
-            </Link>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Hobbys
-            </Link>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Career
-            </Link>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Random
-            </Link>
           </Box>
           <Box
             sx={{
@@ -92,18 +81,9 @@ export default function Footer() {
               gap: 1,
             }}
           >
-            <Typography variant="body2" sx={{ fontWeight: 'medium', textTransform: 'uppercase', fontSize: '1.2rem', mb: 1,}}>
+            <Typography variant="body2">
               Projects
             </Typography>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Website
-            </Link>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Expertises
-            </Link>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Travel
-            </Link>
           </Box>
           <Box
             sx={{
@@ -112,19 +92,15 @@ export default function Footer() {
               gap: 1,
             }}
           >
-            <Typography variant="body2" sx={{ fontWeight: 'medium', textTransform: 'uppercase', fontSize: '1.2rem', mb: 1,}}>
+            <Typography variant="body2">
               Contact
             </Typography>
-            <Link color="rgb(255, 255, 255)" variant="body2" href="#" underline='none'>
-              Let´s connect
-            </Link>
           </Box>
         </Box>
         <Box
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
-            pt: { xs: 4, sm: 8 },
             width: '100%',
             borderTop: '1px solid',
             borderColor: 'divider',
