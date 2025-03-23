@@ -20,13 +20,13 @@ const style = {
     p: 4,
   };
 
-export default function ImgMediaCard({ image, title, description, Popuptext}) {
+export default function ImgMediaCard({ image, title, description, Popuptitle ,Popuptext}) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
   return (
-    <Card sx={{ maxWidth: 345, marginY: 5 }}>
+    <Card sx={{ maxWidth: 345, marginY: 3, background: '#15325066', boxShadow: '0 2px 2px 0 rgba(255, 255, 255, 0.2), 0 2px 20px 0 rgba(147, 218, 230, 0.2)' }}>
       <CardMedia
         component="img"
         alt={title}
@@ -35,15 +35,15 @@ export default function ImgMediaCard({ image, title, description, Popuptext}) {
         sx={{height: 180}}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" sx={{color: 'white'}}>
           {title}
         </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'left' }}>
+        <Typography variant="body2" sx={{ color: 'white', textAlign: 'left' }}>
           {description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant='outlined' size="small" onClick={handleOpen}>
+        <Button variant='outlined' size="small" hover className='ButtonCard' sx={{borderColor: '#604d0d', color: 'white'}} onClick={handleOpen}>
             Erfahre mehr
         </Button>
       </CardActions>
@@ -55,10 +55,10 @@ export default function ImgMediaCard({ image, title, description, Popuptext}) {
             >
                 <Box sx={style}>
                 <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Text in a modal
+                    {Popuptitle}
                 </Typography>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                    {Popuptext}
                 </Typography>
                 </Box>
             </Modal>

@@ -1,10 +1,14 @@
 .hobbys {
     margin-top: 0;
-    padding: 260px 0 100px 0;
+    padding: 200px 0 100px 0;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-  }
+    background-image: url('/src/assets/img/hobbies1.jpg');
+}
+.ButtonCard:hover {
+    background-color: #604d0d;
+}
 
 .wave-effect span {
     display: inline-block;
