@@ -5,10 +5,12 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Button, Typography } from '@mui/material';
 import Footer from '../components/footer';
 import ImgMediaCard from '../components/card';
-import fussballpic from '../assets/img/fussball.png'
-import chesspic from '../assets/img/chesspic.jpg'
-import programmierpic from '../assets/img/prog.jpg'
-import reisepic from '../assets/img/reise1.jpg'
+import fussballpic from '../assets/img/fussball.png';
+import chesspic from '../assets/img/chesspic.jpg';
+import programmierpic from '../assets/img/prog.jpg';
+import reisepic from '../assets/img/reise1.jpg';
+import CustomizedTimeline from '../components/timline';
+
 
 
 function About() {
@@ -72,9 +74,7 @@ function About() {
             </section>
             <section className='karriere' id='karriere'>
                 <Container>
-                    <Row>
-
-                    </Row>
+                    <CustomizedTimeline/>
                 </Container>
             </section>
             <Footer sx={{background: '#000'}}/></>
