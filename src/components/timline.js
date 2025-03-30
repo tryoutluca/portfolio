@@ -13,9 +13,9 @@ export default function CustomizedTimeline() {
             <div className='container-time left'>
                 <img src={bankcler}/>
                 <div className='text-box'>
-                    <h2>Bank Coop AG</h2>
+                    <h2>Bank Cler AG</h2>
                     <small>2013 - 2018</small>
-                    <p>Bei der Bank Coop AG habe ich die Lehre gemacht und danach am Info-Desk 2 Jahre weitergearbeitet.</p>
+                    <p>Kaufmännische Lehre und 2 Jahre am Info-Desk</p>
                     <span className='right-container-arrow'></span>
                 </div>
             </div>
@@ -24,7 +24,7 @@ export default function CustomizedTimeline() {
                 <div className='text-box'>
                     <h2>Universität Bern</h2>
                     <small>2018 - 2019</small>
-                    <p>Die Stelle bei der Uni Bern war meine erste IT-Position. Ich war für die Schnittstellen in der Abrechnung zuständig.</p>
+                    <p>Sachbearbeiter Finanzsysteme, vor allem für die Schnittstelle Finanzen und Abrechnung</p>
                     <span className='left-container-arrow'></span>
                 </div>
             </div>
@@ -33,7 +33,7 @@ export default function CustomizedTimeline() {
                 <div className='text-box'>
                     <h2>Ausgleichkasse Kt. Bern</h2>
                     <small>2020 - 2023</small>
-                    <p>Bei der Bank Coop habe ich mein Berufsleben begonnen. Nach der Lehre habe ich als</p>
+                    <p>Sachbearbeiter Erwerbsersatz Ordnung, Familienzulagen, Mutter- und Elternschaftsentschädigung</p>
                     <span className='right-container-arrow'></span>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export default function CustomizedTimeline() {
                 <div className='text-box'>
                     <h2>Bernische Pensionskasse</h2>
                     <small>2023 - 2024</small>
-                    <p>Bei der Bank Coop habe ich mein Berufsleben begonnen. Nach der Lehre habe ich als</p>
+                    <p>Vorsorgeberater Risikoleistungen</p>
                     <span className='left-container-arrow'></span>
                 </div>
             </div>
@@ -51,7 +51,7 @@ export default function CustomizedTimeline() {
                 <div className='text-box'>
                     <h2>Youtility AG</h2>
                     <small>2024 - 2025</small>
-                    <p>Lorem Ippsumahsdfoa ofhaiodshfa neifihad</p>
+                    <p>Consultant ERP</p>
                     <span className='right-container-arrow'></span>
                 </div>
             </div>

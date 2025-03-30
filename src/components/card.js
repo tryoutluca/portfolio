@@ -7,23 +7,26 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Modal } from '@mui/material';
 import { Box } from '@mui/material';
+import { borderRadius } from '@mui/system';
 
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'black',
-    border: '2px solid #000',
-    boxShadow: 24,
+    width: '50%',
+    bgcolor: '#f2ad6d',
+    opacity: 0.8,
+    border: 'none',
+    borderRadius: 5,
+    boxShadow: 500,
     p: 4,
   };
 
 export default function ImgMediaCard({ image, title, description, Popuptitle ,Popuptext}) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleClose = () => setOpen(false); 
 
   return (
     <Card sx={{ maxWidth: 345, marginY: 3, background: '#15325066', boxShadow: '0 2px 2px 0 rgba(255, 255, 255, 0.2), 0 2px 20px 0 rgba(147, 218, 230, 0.2)' }}>

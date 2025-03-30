@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import './About.css';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -10,71 +10,72 @@ import chesspic from '../assets/img/chesspic.jpg';
 import programmierpic from '../assets/img/prog.jpg';
 import reisepic from '../assets/img/reise1.jpg';
 import CustomizedTimeline from '../components/timline';
-
+import AnimatedCardWrapper from '../components/animatedcardwrapper'
 
 
 function About() {
+    const hobbies = [
+        {
+          image: fussballpic,
+          title: 'Fussball',
+          description: 'Ich spiele schon mein Leben lang Fussball...',
+          Popuptitle: 'Lionel Messi',
+          Popuptext: '',
+        },
+        {
+          image: chesspic,
+          title: 'Schach',
+          description: 'Für mich ist Schach das grandioseste Brettspiel der Welt.',
+          Popuptitle: 'Grandmaster',
+          Popuptext: '',
+        },
+        {
+          image: programmierpic,
+          title: 'Programmieren',
+          description: 'Mein neustes Hobby ist Webseiten erstellen...',
+          Popuptitle: 'Full-Stack',
+          Popuptext: 'Momentan erarbeite ich mir Frontend-Skills...',
+        },
+        {
+          image: reisepic,
+          title: 'Reisen',
+          description: 'Reisen fasziniert mich schon mein ganzes Leben.',
+          Popuptitle: 'Abenteuer',
+          Popuptext: 'Auflistung der Reiseprojekte',
+        },
+      ];
 
     return (
         <>
             <NavBar />
-            <section className='hobbys'id="Hobbys">
-                <Container>
-                    <Row className='g-4'> 
-                        <Col className='d-flex justify-content-center'>
-                           <h1 className='display-1 wave-effect'>
-                                {"Hobbys".split("").map((char, index) => (
-                                    <span key={index} style={{ animationDelay: `${index * 0.2}s` }}>
-                                        {char}
-                                    </span>
-                                ))}
-                            </h1>
-                        </Col>
-                    </Row>
-                    <Row className="justify-content-center">
-                        <Col xs={12} md={6} xl={3} className="d-flex justify-content-center">
-                            <ImgMediaCard
-                            image={fussballpic}
-                            title='Fussball'
-                            description='Ich spiele schon mein lebenlang Fussball. Es ist für mich der perfekte Ausgleich zum Alltag. Kopf freimachen und Energie ablassen.'
-                            Popuptitle='Lionel Messi'
-                            Popuptext=''
-                            />
-                        </Col>
-                        <Col xs={12} md={6} xl={3} className="d-flex justify-content-center">
-                            <ImgMediaCard
-                            image={chesspic}
-                            title='Schach'
-                            description='Schach bedeutet mir viel und es erinnert mich gerne an die Zeit zurück, als ich in jungen Jahren meinen Vater herausgefordert habe.'
-                            Popuptitle='Grandmaster'
-                            Popuptext=''
-                            />
-                        </Col>
-                        <Col xs={12} md={6} xl={3} className="d-flex justify-content-center">
-                            <ImgMediaCard
-                            image={programmierpic}
-                            title='Programmieren'
-                            description='Mein neustes Hobby ist es zuhaus am Laptop ein paar Webseiten zu programmieren. Es macht extrem viel Spass die Seiten zu Designen.'
-                            Popuptitle='Full-Stack'
-                            Popuptext='Momentan bin ich Skills mit Fokus auf das Frontend am erarbeiten. HTML und CSS liegen mir sehr gut, JavaScript habe ich noch einige defizite.
-                            In Zukunft will ich mich auch dem Backend und Datenbanken widmen um ein Full-Stack Developer zu werden.'
-                            />
-                        </Col>
-                        <Col xs={12} md={6} xl={3} className="d-flex justify-content-center">
-                            <ImgMediaCard
-                            image={reisepic}
-                            title='Reisen'
-                            description='Reisen ist etwas das mich am meisten fasziniert. Neue Kulturen, neue Menschen, neue Gewohnheiten und neue Rezepte, was gibt es besseres?'
-                            Popuptitle='Abenteuer'
-                            Popuptext='Auflistung der Reisprojekte'
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
             <section className='karriere' id='karriere'>
                 <Container>
                     <CustomizedTimeline/>
+                </Container>
+            </section>
+            <section className='hobbys'id="Hobbys">
+                <Container>
+                    <Row className="justify-content-center">
+                        {hobbies.map((card, i) => (
+                            <Col
+                            key={i}
+                            xs={12}
+                            md={6}
+                            xl={3}
+                            className="d-flex justify-content-center"
+                            >
+                            <AnimatedCardWrapper delay={i * 0.2}>
+                                <ImgMediaCard
+                                image={card.image}
+                                title={card.title}
+                                description={card.description}
+                                Popuptitle={card.Popuptitle}
+                                Popuptext={card.Popuptext}
+                                />
+                            </AnimatedCardWrapper>
+                            </Col>
+                        ))}
+                    </Row>
                 </Container>
             </section>
             <Footer sx={{background: '#000'}}/></>
