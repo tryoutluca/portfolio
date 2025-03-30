@@ -14,7 +14,6 @@ export default function AnimatedCardWrapper({ children, delay = 0 }) {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: "easeOut", delay }}
-      className="w-100"
     >
       {children}
     </motion.div>

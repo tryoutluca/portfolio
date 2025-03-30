@@ -15,12 +15,12 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '50%',
-    bgcolor: '#f2ad6d',
-    opacity: 0.8,
+    background: 'linear-gradient(135deg, rgb(224, 211, 119), rgb(238, 174, 202))',
     border: 'none',
     borderRadius: 5,
     boxShadow: 500,
     p: 4,
+    color: '#000',
   };
 
 export default function ImgMediaCard({ image, title, description, Popuptitle ,Popuptext}) {
@@ -60,7 +60,7 @@ export default function ImgMediaCard({ image, title, description, Popuptitle ,Po
                 <Typography id="modal-modal-title" variant="h6" component="h2">
                     {Popuptitle}
                 </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                <Typography id="modal-modal-description" sx={{ mt: 2, whiteSpace: 'pre-line' }}>
                     {Popuptext}
                 </Typography>
                 </Box>
