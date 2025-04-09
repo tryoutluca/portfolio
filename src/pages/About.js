@@ -11,6 +11,7 @@ import programmierpic from '../assets/img/prog.jpg';
 import reisepic from '../assets/img/reise1.jpg';
 import CustomizedTimeline from '../components/timline';
 import AnimatedCardWrapper from '../components/animatedcardwrapper'
+import culturepic from '../assets/img/culturepic.jpg'
 
 
 function About() {
@@ -55,7 +56,7 @@ function About() {
             </section>
             <section className='Skills' id='skills'>
                 <Container>
-
+                    
                 </Container>
             </section>
             <section className='hobbys'id="Hobbys">
@@ -70,7 +71,7 @@ function About() {
                             className="d-flex justify-content-center"
                             >
                             <AnimatedCardWrapper delay={i * 0.2} className='d-flex justify-content-center'>
-                                <ImgMediaCard
+                                <ImgMediaCard className='hovercard'
                                 image={card.image}
                                 title={card.title}
                                 description={card.description}

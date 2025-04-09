@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Modal } from '@mui/material';
 import { Box } from '@mui/material';
-import { borderRadius } from '@mui/system';
 
 const style = {
     position: 'absolute',
