@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d3c3c00d.css",
-    "main.js": "/portfolio/static/js/main.636b194a.js",
+    "main.css": "/portfolio/static/css/main.a58318b3.css",
+    "main.js": "/portfolio/static/js/main.ae5c0814.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/fussball.png": "/portfolio/static/media/fussball.0d58de4b7d1ffed545d6.png",
     "static/media/banner-bg1.png": "/portfolio/static/media/banner-bg1.5b66c61244a23e21d443.png",
@@ -14,15 +14,16 @@
     "static/media/CentraNo2-Medium.ttf": "/portfolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
     "static/media/CentraNo2-Book.ttf": "/portfolio/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
     "static/media/chesspic.jpg": "/portfolio/static/media/chesspic.2f37f5a9fec10bd3ae03.jpg",
+    "static/media/culturepic.jpg": "/portfolio/static/media/culturepic.37fa5e7e31be829e6b2b.jpg",
     "static/media/contact-img.svg": "/portfolio/static/media/contact-img.87eac2b29352fa01abb2f9510ef6ac7e.svg",
     "static/media/logo-text1.png": "/portfolio/static/media/logo-text1.e34cceff4743e4e94c10.png",
     "index.html": "/portfolio/index.html",
-    "main.d3c3c00d.css.map": "/portfolio/static/css/main.d3c3c00d.css.map",
-    "main.636b194a.js.map": "/portfolio/static/js/main.636b194a.js.map",
+    "main.a58318b3.css.map": "/portfolio/static/css/main.a58318b3.css.map",
+    "main.ae5c0814.js.map": "/portfolio/static/js/main.ae5c0814.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3c3c00d.css",
-    "static/js/main.636b194a.js"
+    "static/css/main.a58318b3.css",
+    "static/js/main.ae5c0814.js"
   ]
 }
