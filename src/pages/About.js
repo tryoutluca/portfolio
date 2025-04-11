@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import './About.css';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Button, Typography } from '@mui/material';
 import Footer from '../components/footer';
 import ImgMediaCard from '../components/card';
 import fussballpic from '../assets/img/fussball.png';
@@ -11,10 +10,21 @@ import programmierpic from '../assets/img/prog.jpg';
 import reisepic from '../assets/img/reise1.jpg';
 import CustomizedTimeline from '../components/timline';
 import AnimatedCardWrapper from '../components/animatedcardwrapper'
-import culturepic from '../assets/img/culturepic.jpg'
-
+import SkillsSection from '../components/skills';
 
 function About() {
+    const mySkills = [
+        { name: 'HTML', level: 70 },
+        { name: 'CSS', level: 65 },
+        { name: 'JavaScript', level: 55 },
+        { name: 'React', level: 75 },
+        { name: 'Excel', level: 90 },
+        { name: 'PowerPoint', level: 95 },
+        { name: 'ERP-Systems', level: 80 },
+        { name: 'Python', level: 50 },
+        { name: 'Node.js', level: 60 },
+        // Füge hier deine weiteren Skills hinzu
+      ];
     const hobbies = [
         {
           image: fussballpic,
@@ -56,7 +66,7 @@ function About() {
             </section>
             <section className='Skills' id='skills'>
                 <Container>
-                    
+                    <SkillsSection skills={mySkills}/>
                 </Container>
             </section>
             <section className='hobbys'id="Hobbys">

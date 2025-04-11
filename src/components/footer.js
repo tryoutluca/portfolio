@@ -36,6 +36,7 @@ export default function Footer() {
           alignItems: 'center',
           textAlign: { sm: 'center', md: 'left' },
           padding: '20px',
+          bottom: 0,
         }}
       >
         <Box

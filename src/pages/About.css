@@ -1,13 +1,67 @@
-.karriere {
-    margin-top: 0;
-    padding: 200px 0 100px 0;
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('/src/assets/img/karriere.jpg');
+/* === Global Styles & Background === */
+body {
+    /* --- NEU: Mesh Gradient Hintergrund als Bild --- */
+    /* Ersetze 'pfad/zu/deinem/mesh-background.jpg' mit dem korrekten Pfad! */
+    background-image: url('../assets/img/mesh-background.png');
+
+    /* Wichtige Einstellungen für Hintergrundbilder: */
+    background-size: cover;       /* Bild bedeckt den gesamten Bereich */
+    background-repeat: no-repeat; /* Bild nicht kacheln */
+    background-position: center center; /* Bild zentrieren */
+    background-attachment: fixed; /* Hintergrund bleibt beim Scrollen stehen (Parallax-Effekt) */
+    /* Alternative: background-attachment: scroll; (Hintergrund scrollt mit) */
+
+    /* Fallback-Farbe, falls das Bild nicht lädt (wähle eine passende Farbe) */
+    background-color: #f0f0f0;
+    /* --- Ende NEU --- */
+
+    min-height: 100vh; /* Stellt sicher, dass der Body mindestens die Höhe des Viewports hat */
+    margin: 0;        /* Standard-Browser-Margin entfernen */
+    padding: 0;       /* Standard-Browser-Padding entfernen */
+    font-family: 'Franklin Gothic Medium'; /* Wähle deine gewünschte Schriftart! */
+
+    /* WICHTIG: Globale Textfarbe an den Hintergrund anpassen */
+    /* Mesh Gradients können helle UND dunkle Bereiche haben. Wähle eine */
+    /* Farbe, die auf den meisten Bereichen gut lesbar ist, ODER setze */
+    /* Hintergründe für deine Inhalts-Sektionen (siehe unten). */
+    color: #333; /* Beispiel: Dunkler Text (testen!) */
+    /* color: white; */ /* Beispiel: Heller Text (testen!) */
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); */ /* Kann bei hellem Text helfen */
 }
 
-  
+/* === Sektionen & Elemente === */
+/* WICHTIG für Lesbarkeit mit Mesh Gradients: */
+/* Es ist oft sinnvoll, den Sektionen einen eigenen, leicht transparenten */
+/* Hintergrund zu geben, damit der Text immer gut lesbar ist, egal welcher */
+/* Teil des Mesh Gradients dahinter liegt. */
+
+.karriere {
+    margin-top: 0;
+    padding: 200px 5% 100px 5%; /* Etwas seitliches Padding hinzufügen */
+    /* Beispiel für Sektionshintergrund: */
+    /* background-color: rgba(255, 255, 255, 0.85); */ /* Leicht weißlich */
+    /* border-radius: 15px; */
+    /* color: #333; */ /* Sicherstellen, dass Textfarbe hier passt */
+    /* text-shadow: none; */ /* Schatten hier meist nicht nötig */
+}
+
+.hobbys {
+    margin-top: 0;
+    padding: 200px 5% 100px 5%; /* Etwas seitliches Padding hinzufügen */
+    /* Beispiel für Sektionshintergrund: */
+    /* background-color: rgba(0, 0, 0, 0.6); */ /* Leicht dunkel */
+    /* border-radius: 15px; */
+    /* color: white; */ /* Sicherstellen, dass Textfarbe hier passt */
+    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.7); */ /* Optionaler Schatten */
+}
+
+.about {
+    padding: 60px 5% 60px 5%; /* Etwas seitliches und unteres Padding */
+     /* Beispiel für Sektionshintergrund: Siehe .karriere oder .hobbys */
+}
+
+
+/* === Bestehende Animation === */
 @keyframes wave {
     0% {
         opacity: 0.5;
@@ -17,60 +71,79 @@
     }
 }
 
-.about {
-    padding-top: 60px;
+.wave-effect span {
+    display: inline-block;
+    opacity: 0.5;
+    animation: wave 1.5s infinite alternate;
+    /* Erbt die Textfarbe der Umgebung (Body oder Sektion) */
 }
+
+
+/* === Overlay & Popup === */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7); /* Dunkler für Kontrast */
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
 }
 
 .popup {
     background: white;
-    padding: 20px;
+    padding: 25px 30px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     min-width: 300px;
+    /* WICHTIG: Eigene Textfarbe für den hellen Popup-Hintergrund! */
+    color: #333;
+    text-shadow: none; /* Globalen Schatten aufheben */
 }
 
+
+/* === Buttons === */
 .btn {
-    background: rgba(0, 0, 255, 0);
-    border-image-source: linear-gradient(rgb(92, 10, 10), rgb(10, 35, 92), rgb(7, 68, 16));
+    background: rgba(255, 255, 255, 0.1); /* Leichter transparenter Hintergrund als Basis */
+    border-width: 2px;
+    border-style: solid;
+    border-image-source: linear-gradient(45deg, rgb(92, 10, 10), rgb(10, 35, 92), rgb(7, 68, 16));
     border-image-slice: 1;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-}
-.btn-2 {
-    color: black;
-}
-.btn:hover {
-    background-image: linear-gradient(rgb(92, 10, 10), rgb(10, 35, 92), rgb(7, 68, 16));
+    /* Textfarbe muss zum Mesh-Gradient passen oder explizit gesetzt werden */
+    color: inherit; /* Erbt von Body/Sektion (TESTEN!) */
+    /* Oder explizit: */
+    /* color: white; */
+    /* color: #333; */
+    text-shadow: none; /* Globalen Schatten hier meist entfernen */
+    font-weight: bold;
+    transition: background 0.4s ease, color 0.4s ease, border 0.4s ease; /* Übergang */
+    display: inline-block;
+    text-decoration: none;
 }
 
-.hobbys {
-    margin-top: 0;
-    padding: 200px 0 100px 0;
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background: url('../assets/img/hobbies1.jpg');
+.btn-2 {
+    /* Spezifische Farbe für diesen Button */
+    color: black;
+    background: rgba(255, 255, 255, 0.7); /* Hellerer Hintergrund? */
+    border-image-source: linear-gradient(45deg, #aaa, #666); /* Anderer Rand? */
+}
+
+.btn:hover {
+    background-image: linear-gradient(45deg, rgb(92, 10, 10), rgb(10, 35, 92), rgb(7, 68, 16));
+    color: white; /* Sicherstellen, dass Textfarbe im Hover passt */
+    border-image: none; /* Wichtig: Border-Image entfernen, damit BG sichtbar wird */
+    border-color: transparent; /* Verhindert, dass eine Fallback-Rahmenfarbe erscheint */
 }
 
 .ButtonCard:hover {
     background-color: #604d0d;
-}
-
-.wave-effect span {
-    display: inline-block;
-    opacity: 0.5;
-    animation: wave 1.5s infinite alternate;
+    /* Ggf. Textfarbe für Hover anpassen */
+    /* color: white; */
 }

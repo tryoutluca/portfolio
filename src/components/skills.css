@@ -1,0 +1,128 @@
+#skills {
+    padding: 40px 20px; /* More padding */
+    /* Add a subtle background or keep it transparent based on your design */
+    /* background-color: #f8f9fa; */
+  }
+  
+  #skills h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 40px; /* More space below title */
+    font-size: 2em; /* Larger title */
+    color: #333;
+  }
+  
+  /* Grid container for skills */
+  .skills-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* Create 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust gap between grid items */
+    gap: 40px 30px; /* Row gap, Column gap */
+  }
+  
+  /* Individual skill item (grid item) */
+  #skills li {
+    /* No flex needed here anymore */
+    /* margin-bottom removed as grid gap handles spacing */
+  }
+  
+  /* Container for skill name and percentage */
+  .skill-info {
+    display: flex; /* Use flex to place name and percentage on same line */
+    justify-content: space-between; /* Pushes name left, percentage right */
+    margin-bottom: 8px; /* Space between text and bar */
+    font-size: 0.95em;
+    color: #444;
+  }
+  
+  .skill-info span {
+    /* No specific styling needed unless you want bold etc. */
+  }
+  
+  .skill-percentage {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* --- Skill Bar Styling --- */
+  
+  .skill-bar {
+    background-color: #e0e0e0; /* Lighter grey background */
+    border-radius: 10px; /* Consistent radius */
+    height: 20px; /* Make the bar thicker */
+    width: 100%; /* Ensure bar takes full width of its container */
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+  }
+  
+  .skill-level {
+    /* Gradient is now set via inline style in React for potential future dynamic colors */
+    /* background: linear-gradient(90deg, #64b5f6, #42a5f5); */
+    height: 100%;
+    border-radius: 10px; /* Match parent radius */
+    /* Width is controlled by framer-motion */
+    transition: width 1s ease-in-out; /* Smooth transition (matches framer motion duration) */
+    position: relative; /* Needed for the pseudo-element */
+    /* Text removed from here */
+  }
+  
+  /* Optional: Subtle shine effect on the level */
+  .skill-level::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px; /* Match parent radius */
+    opacity: 0.2; /* Subtle shine */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
+  /* --- Responsive Adjustments --- */
+  
+  /* Medium screens (e.g., tablets) - 2 columns */
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 25px;
+    }
+    #skills h2 {
+      font-size: 1.8em;
+    }
+  }
+  
+  /* Small screens (e.g., mobile) - 1 column */
+  @media (max-width: 576px) {
+    .skills-grid {
+      grid-template-columns: 1fr; /* Single column */
+      gap: 25px 0; /* Only row gap needed */
+    }
+    #skills h2 {
+      font-size: 1.6em;
+      margin-bottom: 30px;
+    }
+    #skills {
+      padding: 30px 15px;
+    }
+    .skill-info {
+      font-size: 0.9em;
+    }
+    .skill-bar {
+        height: 18px; /* Slightly thinner on mobile */
+    }
+  }
+  
+  
+  /* Removed redundant/older styles */
+  /* .skill-icon */
+  /* .skill-bar:hover .skill-level */
+  /* Initial definitions of .skill-bar and .skill-level */
