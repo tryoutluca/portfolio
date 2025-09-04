@@ -70,6 +70,7 @@ function About() {
                 </Container>
             </section>
             <section className='hobbys'id="Hobbys">
+              <h2>Meine Hobbys</h2>
                 <Container>
                     <Row className="justify-content-center">
                         {hobbies.map((card, i) => (

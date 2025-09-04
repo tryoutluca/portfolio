@@ -24,11 +24,6 @@
   }
   
   /* Individual skill item (grid item) */
-  #skills li {
-    /* No flex needed here anymore */
-    /* margin-bottom removed as grid gap handles spacing */
-  }
-  
   /* Container for skill name and percentage */
   .skill-info {
     display: flex; /* Use flex to place name and percentage on same line */
@@ -36,10 +31,6 @@
     margin-bottom: 8px; /* Space between text and bar */
     font-size: 0.95em;
     color: #444;
-  }
-  
-  .skill-info span {
-    /* No specific styling needed unless you want bold etc. */
   }
   
   .skill-percentage {

@@ -92,7 +92,7 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-image: url('/src/assets/img/mesh-background.png');
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -104,10 +104,12 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
+  transition: font-size 0.3s ease-in;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
+    font-size: larger;
 }
 span.navbar-text {
     display: flex;
@@ -232,9 +234,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
-
 .img-navbar {
   width: 100px;
+  transition: 1s ease-out;
+}
+.img-navbar:hover {
+  width: 120px;
 }
 
 /************ Banner Css ************/
@@ -264,7 +269,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -307,6 +311,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+blockquote {
+  color: white;
+}
+.philosophy-quote-container{
+  color: white;
 }
 
 /************ Skills Css ************/
@@ -353,7 +363,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
 }
 .project h2 {
 	font-size: 45px;

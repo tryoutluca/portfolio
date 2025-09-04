@@ -7,7 +7,7 @@ export default function SitemarkIcon() {
           <text
             x="0"
             y="20"
-            fill="#B4C0D3"
+            fill="#fff"
             fontSize="20"
             fontFamily="Arial, sans-serif"
           >

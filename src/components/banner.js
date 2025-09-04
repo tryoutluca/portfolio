@@ -60,7 +60,7 @@ export const Banner = () => {
                 <span className="tagline">Willkommen auf meiner Portfolio-Seite</span>
                 <h1>{`Hi! Ich bin Luca`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Berater", "Fussballer", "Programmierer :)" ]'><span className="wrap">{text}</span></span></h1>
                 <p className="philosophy-quote">
-                    <PhilosophyQuote />
+                    <PhilosophyQuote className="quote"/>
                 </p>
                 <Link to='/contact' className="link-banner">
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} />

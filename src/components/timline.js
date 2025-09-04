@@ -5,6 +5,7 @@ import unibern from '../assets/img/unibern.png';
 import akbern from '../assets/img/akb.jpeg';
 import bpk from '../assets/img/bpk.jpeg';
 import youtility from '../assets/img/youtility.jpeg'
+import pksbb from '../assets/img/pksbb.jpeg'
 
 export default function CustomizedTimeline() {
 
@@ -55,6 +56,15 @@ export default function CustomizedTimeline() {
                     <span className='right-container-arrow'></span>
                 </div>
             </div>
-            </div></>
+            <div className='container-time right'>
+                <img src={pksbb} />
+                <div className='text-box'>
+                    <h2>Pensionskasse SBB</h2>
+                    <small>2025 - actual</small>
+                    <p>Applikationsmanager</p>
+                    <span className='left-container-arrow'></span>
+                </div>
+            </div>
+        </div></>
     )
 }

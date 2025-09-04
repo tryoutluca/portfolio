@@ -82,6 +82,9 @@
 .container-time:nth-child(5) {
     animation-delay: 4s;
 }
+.container-time:nth-child(6) {
+    animation-delay: 5s;
+}
 .text-box h2 {
     font-weight: 600;
     margin-bottom: 0;

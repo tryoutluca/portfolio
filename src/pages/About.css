@@ -34,6 +34,12 @@ body {
 /* Es ist oft sinnvoll, den Sektionen einen eigenen, leicht transparenten */
 /* Hintergrund zu geben, damit der Text immer gut lesbar ist, egal welcher */
 /* Teil des Mesh Gradients dahinter liegt. */
+h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 40px; /* More space below title */
+    font-size: 2em; /* Larger title */
+    color: #333;
+  }
 
 .karriere {
     margin-top: 0;
@@ -47,7 +53,7 @@ body {
 
 .hobbys {
     margin-top: 0;
-    padding: 200px 5% 100px 5%; /* Etwas seitliches Padding hinzufügen */
+    padding: 100px 5% 100px 5%; /* Etwas seitliches Padding hinzufügen */
     /* Beispiel für Sektionshintergrund: */
     /* background-color: rgba(0, 0, 0, 0.6); */ /* Leicht dunkel */
     /* border-radius: 15px; */
