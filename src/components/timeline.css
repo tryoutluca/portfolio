@@ -20,13 +20,13 @@
     }   
 }
 .text-box {
-    color: black;
+    color: var(--text);
     padding: 20px 30px;
-    background: #1bacdc;
+    background: var(--surface);
+    border: 1px solid var(--border);
     position: relative;
     border-radius: 6px;
     font-size: 15px;
-    box-shadow: 10px 10px #0f90bb93;
 }
 .left {
     left: 50%;
@@ -52,7 +52,7 @@
     position: absolute;
     width: 6px;
     height: 100%;
-    background: #fff;
+    background: var(--accent-gradient);
     top: 0;
     left: 50%;
     margin-left: -3px;
@@ -101,7 +101,7 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #1bacdc;
+    border-left: 15px solid var(--surface);
     right: -14px;
 }
 .right-container-arrow {
@@ -112,7 +112,7 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #1bacdc;
+    border-right: 15px solid var(--surface);
     left: -14px;
 }
 @media screen and (max-width: 600px) {
@@ -140,7 +140,7 @@
         left: 10px;
     }
     .left-container-arrow {
-        border-right: 15px solid #1bacdc;
+        border-right: 15px solid var(--surface);
         left: -15px;
         border-left: 0;
     }

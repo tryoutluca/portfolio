@@ -5,11 +5,16 @@
   .contact img {
     width: 92%;
   }
-h2 {
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+  }
+.contact h2 {
     text-align: center; /* Center the title */
     margin-bottom: 40px; /* More space below title */
     font-size: 2em; /* Larger title */
-    color: #333;
   }
   .contact form input, .contact form textarea {
     width: 100%;
@@ -57,7 +62,7 @@ h2 {
   }
   .contact form button::before {
     content: "";
-    background: #121212;
+    background: var(--accent-gradient);
     width: 0;
     height: 100%;
     position: absolute;

@@ -121,7 +121,7 @@ export default function Footer() {
               size="small"
               href="https://github.com/tryoutluca"
               aria-label="GitHub"
-              sx={{ alignSelf: 'center' }}
+              sx={{ alignSelf: 'center', '&:hover': { color: 'var(--accent-warm)' } }}
             >
               <GitHubIcon />
             </IconButton>
@@ -130,7 +130,7 @@ export default function Footer() {
               size="small"
               href="https://x.com/"
               aria-label="X"
-              sx={{ alignSelf: 'center' }}
+              sx={{ alignSelf: 'center', '&:hover': { color: 'var(--accent-warm)' } }}
             >
               <TwitterIcon />
             </IconButton>
@@ -139,7 +139,7 @@ export default function Footer() {
               size="small"
               href="https://www.linkedin.com/in/luca-luedi/"
               aria-label="LinkedIn"
-              sx={{ alignSelf: 'center' }}
+              sx={{ alignSelf: 'center', '&:hover': { color: 'var(--accent-warm)' } }}
             >
               <LinkedInIcon />
             </IconButton>

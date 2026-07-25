@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import { Banner } from "../components/banner";
 import Footer from "../components/footer";
+import ParticleHero from "../components/ParticleHero";
 import { ThemeProvider } from "@mui/material";
 import theme from "../components/theme";
 
@@ -13,7 +13,7 @@ function Home() {
             <NavBar />
           </div>
           <div>
-            <Banner />
+            <ParticleHero />
           </div>
           <div>
             <Footer />

@@ -40,7 +40,7 @@ function SkillsSection({ skills }) {
                 }}
                 // No inline styles needed for text inside the bar anymore
                 style={{
-                  background: 'linear-gradient(90deg, #64b5f6, #42a5f5)', // Keep gradient here
+                  background: 'var(--accent-gradient)',
                 }}
               />
             </div>

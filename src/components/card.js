@@ -14,12 +14,12 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '50%',
-    background: 'linear-gradient(135deg, rgb(224, 211, 119), rgb(238, 174, 202))',
-    border: 'none',
+    background: 'var(--surface-2)',
+    border: '1px solid var(--border)',
     borderRadius: 5,
     boxShadow: 500,
     p: 4,
-    color: '#000',
+    color: 'var(--text)',
   };
 
 export default function ImgMediaCard({ image, title, description, Popuptitle ,Popuptext}) {
@@ -28,7 +28,7 @@ export default function ImgMediaCard({ image, title, description, Popuptitle ,Po
     const handleClose = () => setOpen(false); 
 
   return (
-      <Card sx={{ maxWidth: 345, marginY: 3, background: '#15325066', boxShadow: '0 2px 2px 0 rgba(255, 255, 255, 0.2), 0 2px 20px 0 rgba(147, 218, 230, 0.2)' }}>
+      <Card sx={{ maxWidth: 345, marginY: 3, background: 'var(--surface)', border: '1px solid var(--border)', boxShadow: 'none' }}>
         <CardMedia
           component="img"
           alt={title}
@@ -56,10 +56,10 @@ export default function ImgMediaCard({ image, title, description, Popuptitle ,Po
                   aria-describedby="modal-modal-description"
               >
                   <Box sx={style}>
-                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                  <Typography id="modal-modal-title" variant="h6" component="h2" sx={{ color: 'var(--text)' }}>
                       {Popuptitle}
                   </Typography>
-                  <Typography id="modal-modal-description" sx={{ mt: 2, whiteSpace: 'pre-line' }}>
+                  <Typography id="modal-modal-description" sx={{ mt: 2, whiteSpace: 'pre-line', color: 'var(--text-muted)' }}>
                       {Popuptext}
                   </Typography>
                   </Box>

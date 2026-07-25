@@ -1,3 +1,18 @@
+/************ Design Tokens ************/
+:root {
+  --bg: #0A0C0F;
+  --surface: #12151B;
+  --surface-2: #171B22;
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #F2F4F7;
+  --text-muted: #8A93A1;
+  --accent-cool: #3B82F6;
+  --accent-warm: #E8A64A;
+  --accent-gradient: linear-gradient(90.21deg, var(--accent-cool) -5.91%, var(--accent-warm) 111.58%);
+  --font-display: "Space Grotesk", "Centra", sans-serif;
+  --font-body: "Centra", "Space Grotesk", sans-serif;
+}
+
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
@@ -31,15 +46,17 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
-  color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font-body) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
+  font-family: var(--font-display);
+  color: var(--text);
 }
 
 p, a, li, button, ul {
@@ -92,7 +109,9 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-image: url('/src/assets/img/mesh-background.png');
+  background: rgba(10, 12, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -254,7 +273,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: var(--accent-gradient);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -325,7 +344,7 @@ blockquote {
   position: relative;
 }
 .skill-bx {
-  background: #151515;
+  background: var(--surface);
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
@@ -408,7 +427,7 @@ blockquote {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: var(--accent-gradient);
     top: 0;
     left: 0;
     z-index: -1;
@@ -440,7 +459,7 @@ blockquote {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: var(--accent-gradient);
   opacity: 0.85;
   position: absolute;
   width: 100%;

@@ -61,6 +61,7 @@ function About() {
             <NavBar />
             <section className='karriere' id='karriere'>
                 <Container>
+                    <h2>Werdegang</h2>
                     <CustomizedTimeline/>
                 </Container>
             </section>

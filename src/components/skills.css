@@ -8,7 +8,6 @@
     text-align: center; /* Center the title */
     margin-bottom: 40px; /* More space below title */
     font-size: 2em; /* Larger title */
-    color: #333;
   }
   
   /* Grid container for skills */
@@ -30,18 +29,18 @@
     justify-content: space-between; /* Pushes name left, percentage right */
     margin-bottom: 8px; /* Space between text and bar */
     font-size: 0.95em;
-    color: #444;
+    color: var(--text-muted);
   }
-  
+
   .skill-percentage {
     font-weight: bold;
-    color: #555;
+    color: var(--text);
   }
-  
+
   /* --- Skill Bar Styling --- */
-  
+
   .skill-bar {
-    background-color: #e0e0e0; /* Lighter grey background */
+    background-color: var(--surface-2); /* Lighter grey background */
     border-radius: 10px; /* Consistent radius */
     height: 20px; /* Make the bar thicker */
     width: 100%; /* Ensure bar takes full width of its container */
